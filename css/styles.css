@@ -110,7 +110,7 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
 
      display: block;
       
@@ -260,7 +260,11 @@ background-color: #188CE8;
   border: none;
   cursor: pointer;
   text-align: center;
-  
+
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-primary:hover,
@@ -351,15 +355,19 @@ width: 270px;
 }
 
 /*our employments*/
+
+
 .employments { 
     display: flex;
  
     
 }
+.employments-image  {
+    display: block;
+}
 
 .employments .employments-foto { 
     display: block;
-
     position: relative;
     
 }
@@ -479,7 +487,6 @@ width: 270px;
 .team-icons:hover,
 .team-icons:focus {
     fill: var(--hero-color);
-    background-color: var(--accent-color);
 }
 
 /*regular customers*/
@@ -734,7 +741,8 @@ background-color: var(--accent-color);
     width: 100%;
     height: 100%;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
     font-size: 18px;
@@ -811,7 +819,9 @@ background-color: var(--accent-color);
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
+    padding: 6px;
    justify-content: center;
+   cursor: pointer;
 
 } 
 
@@ -819,7 +829,9 @@ background-color: var(--accent-color);
     width: 18px;
     height: 18px;
    align-items: center;
-   cursor: pointer;
+   
+
+   
 }  
 
 
